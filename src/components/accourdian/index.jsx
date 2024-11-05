@@ -19,8 +19,10 @@ export default function Accourdian() {
                       setSelected(selected === item.id ? null : item.id)
                     }
                   >
-                    <h3>{item.question}</h3>
-                    <span>{selected === item.id ? "-" : "+"}</span>
+                    <h3>
+                      {item.question}{" "}
+                      <span>{selected === item.id ? "-" : "+"}</span>
+                    </h3>
                   </div>
                   <div
                     className={`content ${selected === item.id ? "open" : ""}`}
