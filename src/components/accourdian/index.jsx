@@ -7,10 +7,12 @@ export default function Accourdian() {
   const [multiple, setMultiple] = useState([]);
 
   function handleSingleSelection(id) {
+    setMultiple([])
     setSelected(selected === id ? null : id);
   }
 
   function handleMultiSelection(currentId) {
+    setSelected(null)
     let cpyMultiple = [...multiple];
     const findIndexOfCurrentId = cpyMultiple.indexOf(currentId);
 
